@@ -46,7 +46,7 @@ app.get("/api/book/:bookId/section/:sectionId", function(req, res) {
       response.response[sectionId] = sectionItem;
       return setTimeout(function() {
         res.json(response);
-      }, 0); //  (Math.random() * 500 + 500))
+      }, Math.random() * 500 + 500);
     }
   }
   response.status = "NOT-FOUND";

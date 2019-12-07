@@ -5,6 +5,7 @@ export async function getBookDetails(bookId) {
   try {
     const response = await fetch(`/api/book/${bookId}`);
     const myJson = await response.json();
+
     return myJson.response;
   } catch (error) {
     console.error(error);
